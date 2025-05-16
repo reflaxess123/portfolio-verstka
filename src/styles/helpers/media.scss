@@ -1,0 +1,42 @@
+$mobile: 767px;
+$mobile-s: 480px;
+
+@mixin mobile-above {
+  @media (width > $mobile) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (width <= $mobile) {
+    @content;
+  }
+}
+
+@mixin mobile-s-above {
+  @media (width > $mobile-s) {
+    @content;
+  }
+}
+
+@mixin mobile-s {
+  @media (width <= $mobile-s) {
+    @content;
+  }
+}
+
+@mixin hover($hasActiveEffectOnMobile: true) {
+  @media (any-hover: hover) {
+    &:hover {
+      @content;
+    }
+  }
+
+  @if ($hasActiveEffectOnMobile) {
+    @media (any-hover: none) {
+      &:active {
+        @content;
+      }
+    }
+  }
+}

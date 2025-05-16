@@ -1,0 +1,186 @@
+@use "variables";
+@use "fonts";
+// @import 'utils'; // Раскомментируйте и укажите правильный путь, если у вас есть файл с миксинами
+
+html {
+  &.is-lock {
+    overflow: hidden;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-base);
+  color: var(--color-black);
+  background-color: var(--color-white);
+}
+
+main {
+  flex-grow: 1;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6,
+p {
+  margin: 0;
+}
+
+h1,
+.h1 {
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: -0.72px;
+}
+
+h2,
+.h2 {
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.64px;
+}
+
+h3,
+.h3 {
+  font-size: 28px;
+  line-height: 32px;
+  letter-spacing: -0.56px;
+}
+
+h4,
+.h4 {
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.48px;
+  font-weight: 600;
+}
+
+h5,
+.h5 {
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.4px;
+  font-weight: 500;
+}
+
+h6,
+.h6 {
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: -0.32px;
+  font-weight: 600;
+}
+
+// New text styles from the user request
+.text-outlined {
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -0.96px;
+  margin: 0;
+  // Assuming a heavier weight for outlined text, similar to headings
+  font-weight: 700; // This can be adjusted
+  color: var(
+    --color-white
+  ); // Assuming outlined text is also white like headings
+}
+
+.display-m {
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.48px;
+  margin: 0;
+  font-weight: 700; // Assuming a heavier weight, can be adjusted
+  color: var(--color-white); // Assuming display text is also white
+}
+
+.outlined-m {
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -0.48px;
+  margin: 0;
+  font-weight: 700; // Assuming a heavier weight, can be adjusted
+  color: var(--color-white); // Assuming outlined text is also white
+}
+
+.sub-heading {
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -0.8px;
+  margin: 0;
+  font-weight: 700; // Consistent with other headings
+  color: var(--color-white); // Consistent with other headings
+}
+
+.p1 {
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+  margin: 0;
+}
+
+.p2 {
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.32px;
+  margin: 0;
+}
+
+.p3 {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.24px;
+  margin: 0;
+}
+
+.button-text {
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.4px;
+  margin: 0;
+}
+
+.button-text-2 {
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.32px;
+  margin: 0;
+}
+
+.text-underlined {
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: -0.4px;
+  text-decoration: underline;
+  margin: 0;
+}
+// End of new text styles
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+// :focus-visible { // Закомментировано, если миксин не определен или не используется
+//   @include focus-visible;
+// }
+
+.header,
+.content > *:not(:nth-last-child(2)),
+.footer {
+  // display: none !important;
+}
