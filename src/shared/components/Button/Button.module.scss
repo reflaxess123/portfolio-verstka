@@ -1,107 +1,90 @@
 .button {
-    /* Reset default button styles */
-    border: none;
-    margin: 0;
-    padding: 0;
-    width: auto;
-    overflow: visible;
-    background: transparent;
-    color: inherit;
-    font: inherit;
-    line-height: normal;
-    -webkit-font-smoothing: inherit;
-    -moz-osx-font-smoothing: inherit;
-    -webkit-appearance: none;
-    text-decoration: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  text-decoration: none;
 
-    /* Custom styles */
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    border-radius: 6px; /* Based on image */
-    font-weight: 500; /* Common for buttons, adjust as needed */
-    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: 500;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 
-    /* Default state from image (black button) */
-    background-color: #000000;
+  background-color: #000000;
+  color: #ffffff;
+  border: 1px solid transparent;
+
+  .icon {
+    display: inline-block;
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
     color: #ffffff;
-    /* Add 1px transparent border to prevent layout shift on active state */
-    border: 1px solid transparent;
+    stroke: var(--color-white);
+  }
+
+  &.small {
+    padding: 12px 16px;
+    font-size: 13px;
+    gap: 6px;
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &.medium {
+    padding: 16px 20px;
+    font-size: 15px;
+    gap: 10.5px;
+    .icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &.iconOnly {
+    &.small {
+      width: 48px;
+      height: 48px;
+      padding: 12px;
+      .icon {
+        width: 20px;
+        height: 20px;
+      }
+    }
+    &.medium {
+      width: 56px;
+      height: 56px;
+      padding: 16px;
+      .icon {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+
+  &:hover {
+    background-color: #333333;
+    color: #ffffff;
+    border-color: #333333;
+  }
+
+  &:active {
+    background-color: #ffffff;
+    color: #000000;
+    border-color: #000000;
 
     .icon {
-        background-color: currentColor; /* Makes SVG mask take the text color */
-        display: inline-block;
-        -webkit-mask-size: contain;
-        mask-size: contain;
-        -webkit-mask-repeat: no-repeat;
-        mask-repeat: no-repeat;
-        -webkit-mask-position: center;
-        mask-position: center;
+      stroke: var(--color-black);
     }
-
-    /* Sizes */
-    &.small {
-        padding: 6px 12px;
-        font-size: 13px;
-        gap: 6px;
-        .icon {
-            width: 13px;
-            height: 13px;
-        }
-    }
-
-    &.medium {
-        padding: 10px 16px;
-        font-size: 15px;
-        gap: 8px;
-        .icon {
-            width: 15px;
-            height: 15px;
-        }
-    }
-
-    /* Icon-only variant adjustments */
-    &.iconOnly {
-        gap: 0;
-        &.small {
-            padding: 6px;
-            .icon {
-                /* Icon size might be same or slightly different in icon-only */
-                width: 15px;
-                height: 15px;
-            }
-        }
-        &.medium {
-            padding: 10px;
-            .icon {
-                width: 17px;
-                height: 17px;
-            }
-        }
-    }
-
-    /* States */
-    &:not(:disabled):hover {
-        background-color: #333333; /* Dark gray from image */
-        color: #ffffff;
-        border-color: #333333; /* Or transparent if preferred */
-    }
-
-    &:not(:disabled):active {
-        background-color: #ffffff;
-        color: #000000;
-        border-color: #000000;
-    }
-
-    /* Disabled state styling */
-    &.disabled,
-    &:disabled {
-        /* Standard :disabled pseudo-class */
-        background-color: #e0e0e0; /* Lighter gray for disabled */
-        color: #a0a0a0; /* Muted text color */
-        cursor: not-allowed;
-        border-color: #e0e0e0;
-        /* Icon color will also be muted due to currentColor */
-    }
+  }
 }
