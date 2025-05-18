@@ -1,6 +1,6 @@
 $mobile: 767px;
 $mobile-s: 480px;
-$tablet: 1130px;
+$tablet: 890px;
 
 @mixin tablet-above {
   @media (width > $tablet) {
