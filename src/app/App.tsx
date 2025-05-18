@@ -1,11 +1,9 @@
-import { Header } from './Header/Header';
-import './test.scss';
+import { Header } from '../widgets/Header/Header';
 
 function App() {
     return (
         <div>
             <Header />
-            {/* <HelloSection /> */}
         </div>
     );
 }
