@@ -3,15 +3,15 @@ import React from 'react';
 import styles from './Button.module.scss';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children?: React.ReactNode;
   svgPath?: string;
   icon?: React.ReactElement<React.SVGProps<SVGSVGElement>>;
   iconPosition?: 'left' | 'right';
   size?: 'small' | 'medium';
+  text?: string;
 }
 
 export const Button: React.FC<ButtonProps> = ({
-  children,
+  text,
   svgPath,
   icon,
   iconPosition = 'left',
@@ -20,7 +20,7 @@ export const Button: React.FC<ButtonProps> = ({
   disabled,
   ...props
 }) => {
-  const isIconOnly = !children && (!!svgPath || !!icon);
+  const isIconOnly = !!svgPath || !!icon;
 
   const buttonClasses = cn(
     styles.button,
@@ -43,7 +43,7 @@ export const Button: React.FC<ButtonProps> = ({
   return (
     <button className={buttonClasses} disabled={disabled} {...props}>
       {(svgPath || icon) && (iconPosition === 'left' || isIconOnly) && renderIcon()}
-      {children && <span className={textClassName}>{children}</span>}
+      {text && <span className={textClassName}>{text}</span>}
       {(svgPath || icon) && iconPosition === 'right' && !isIconOnly && renderIcon()}
     </button>
   );

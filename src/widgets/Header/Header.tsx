@@ -16,9 +16,12 @@ export function Header() {
         <h5 className={styles['header__menu-item']}>Projects</h5>
         <h5 className={styles['header__menu-item']}>Contacts Me</h5>
       </ul>
-      <Button className={styles['header__button']} icon={<DownloadIcon />} size="medium">
-        <div className={styles['header__button-text']}>Resume</div>
-      </Button>
+      <Button
+        className={styles['header__button']}
+        icon={<DownloadIcon />}
+        size="medium"
+        text="Resume"
+      />
     </header>
   );
 }

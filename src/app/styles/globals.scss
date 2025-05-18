@@ -3,6 +3,10 @@
 @use 'utils';
 @use './helpers/' as *;
 
+// * {
+//   outline: 1px dashed rgba(255, 0, 255, 0.5);
+// }
+
 html {
   &.is-lock {
     overflow: hidden;
@@ -84,7 +88,6 @@ h6,
   font-weight: 600;
 }
 
-// New text styles from the user request
 .text-outlined {
   font-size: 48px;
   line-height: 56px;
