@@ -1,0 +1,27 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding: 32px 80px;
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        padding: 8px 0 8px 32px;
+
+        &-title {
+            font-weight: 700;
+            padding-left: 12px;
+        }
+    }
+
+    &__menu {
+        display: flex;
+        list-style-type: none;
+        padding-left: 243px;
+        gap: 32px;
+    }
+
+    &__menu-item {
+        font-weight: 600;
+    }
+}
