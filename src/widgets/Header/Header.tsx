@@ -22,8 +22,10 @@ export function Header() {
           <h5 className="header__logo-title">Personal</h5>
         </div>
         <ul className="header__menu">
-          {Menu.map((item) => (
-            <li className="h5 header__menu-item">{item}</li>
+          {Menu.map((item, index) => (
+            <li className="h5 header__menu-item" key={index}>
+              {item}
+            </li>
           ))}
         </ul>
         <Button className="header__button" icon={<DownloadIcon />} size="medium" text="Resume" />
@@ -35,8 +37,10 @@ export function Header() {
       </header>
       <div className={`fullscreen-menu ${isMenuOpen ? 'is-active' : ''}`}>
         <ul className="fullscreen-menu__list">
-          {Menu.map((item) => (
-            <li className="h5 fullscreen-menu__item">{item}</li>
+          {Menu.map((item, index) => (
+            <li className="h5 fullscreen-menu__item" key={index}>
+              {item}
+            </li>
           ))}
         </ul>
       </div>

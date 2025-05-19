@@ -1,6 +1,42 @@
-.hello-section__text {
-  font-size: 20px;
-  line-height: 24px;
-  letter-spacing: 0.4px;
-  margin: 0;
+@use '@/app/styles/helpers' as *;
+
+.hello-section {
+  padding: 20px fluid(32, 0);
+
+  &__text {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.4px;
+    margin: 0;
+    padding-top: 32px;
+    max-width: 600px;
+  }
+
+  &__block1 {
+    padding-top: 110px;
+    display: flex;
+    gap: 16px;
+
+    &-title2 {
+      font-weight: 800;
+    }
+  }
+
+  &__block2 {
+    display: flex;
+    gap: 16px;
+
+    &-title3 {
+      font-weight: 800;
+    }
+  }
+
+  &__block3 {
+    display: flex;
+    gap: 16px;
+
+    &-title6 {
+      font-weight: 800;
+    }
+  }
 }
