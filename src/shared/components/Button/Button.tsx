@@ -1,6 +1,6 @@
 import cn from 'classnames';
 import React from 'react';
-import styles from './Button.module.scss';
+import './Button.scss';
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   svgPath?: string;
@@ -23,11 +23,11 @@ export const Button: React.FC<ButtonProps> = ({
   const isIconOnly = !!svgPath || !!icon;
 
   const buttonClasses = cn(
-    styles.button,
-    styles[size],
+    'button',
+    size,
     {
-      [styles.iconOnly]: isIconOnly,
-      [styles.disabled]: disabled,
+      'icon-only': isIconOnly,
+      disabled,
     },
     className
   );
@@ -36,7 +36,7 @@ export const Button: React.FC<ButtonProps> = ({
 
   const renderIcon = () => {
     if (icon) {
-      return React.cloneElement(icon, { className: styles.icon });
+      return React.cloneElement(icon, { className: 'button__icon' });
     }
   };
 

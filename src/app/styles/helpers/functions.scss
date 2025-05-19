@@ -26,6 +26,27 @@
   );
 }
 
+@function fluid-px($max: 100, $min: 10, $endPoint: null) {
+  $maxViewportWidth: $container-desktop-width;
+  $minViewportWidth: 390;
+
+  @if ($endPoint == 'laptop') {
+    $minViewportWidth: $container-laptop-width;
+  } @else if ($endPoint == 'tablet') {
+    $minViewportWidth: $container-tablet-width;
+  }
+
+  $maxSize: $max;
+  $minSize: $min;
+  $maxWidth: $maxViewportWidth;
+  $minWidth: $minViewportWidth;
+
+  $slope: math.div(($maxSize - $minSize), ($maxWidth - $minWidth));
+  $yAxisIntersections: -$minWidth * $slope + $minSize;
+
+  @return clamp(#{$minSize}px, #{$yAxisIntersections}px + #{$slope * 100vw}, #{$maxSize}px);
+}
+
 @function fluid-to-laptop($max: 100, $min: 10) {
   @return fluid($max, $min, 'laptop');
 }

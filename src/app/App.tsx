@@ -1,10 +1,12 @@
 import { Header } from '../widgets/Header/Header';
+import { HelloSection } from '../widgets/HelloSection/HelloSection';
 
 function App() {
   return (
-    <div>
+    <>
       <Header />
-    </div>
+      <HelloSection />
+    </>
   );
 }
 export default App;

@@ -1,3 +1,4 @@
+@use './reset' as *;
 @use 'variables';
 @use 'fonts';
 @use 'utils';
@@ -16,9 +17,6 @@ html {
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   font-family: var(--font-family-base);
   color: var(--color-black);
   background-color: var(--color-white);
@@ -26,6 +24,43 @@ body {
 
 main {
   flex-grow: 1;
+}
+
+.display-text {
+  font-size: fluid(48, 28);
+  line-height: fluid(56, 32);
+  letter-spacing: -2%;
+  margin: 0;
+}
+
+.display-text-outlined {
+  font-size: 48px;
+  line-height: 56px;
+  letter-spacing: -2%;
+  margin: 0;
+  -webkit-text-stroke: 2px var(--color-black);
+}
+
+.display-text-m {
+  font-style: 24px;
+  line-height: 28px;
+  letter-spacing: -2%;
+  margin: 0;
+}
+
+.display-text-m-outlined {
+  font-style: 24px;
+  line-height: 28px;
+  letter-spacing: -2%;
+  margin: 0;
+  -webkit-text-stroke: 2px var(--color-black);
+}
+
+.sub-heading {
+  font-style: 40px;
+  line-height: 48px;
+  letter-spacing: -2%;
+  margin: 0;
 }
 
 h1,
@@ -67,8 +102,8 @@ h3,
 
 h4,
 .h4 {
-  font-size: 24px;
-  line-height: 28px;
+  font-size: fluid(24, 20);
+  line-height: fluid(28, 24);
   letter-spacing: -0.48px;
   font-weight: 600;
 }
@@ -87,43 +122,6 @@ h6,
   line-height: 20px;
   letter-spacing: -0.32px;
   font-weight: 600;
-}
-
-.text-outlined {
-  font-size: 48px;
-  line-height: 56px;
-  letter-spacing: -0.96px;
-  margin: 0;
-  // Assuming a heavier weight for outlined text, similar to headings
-  font-weight: 700; // This can be adjusted
-  color: var(--color-white); // Assuming outlined text is also white like headings
-}
-
-.display-m {
-  font-size: 24px;
-  line-height: 28px;
-  letter-spacing: -0.48px;
-  margin: 0;
-  font-weight: 700; // Assuming a heavier weight, can be adjusted
-  color: var(--color-white); // Assuming display text is also white
-}
-
-.outlined-m {
-  font-size: 24px;
-  line-height: 28px;
-  letter-spacing: -0.48px;
-  margin: 0;
-  font-weight: 700; // Assuming a heavier weight, can be adjusted
-  color: var(--color-white); // Assuming outlined text is also white
-}
-
-.sub-heading {
-  font-size: 40px;
-  line-height: 48px;
-  letter-spacing: -0.8px;
-  margin: 0;
-  font-weight: 700; // Consistent with other headings
-  color: var(--color-white); // Consistent with other headings
 }
 
 .p1 {
@@ -168,7 +166,6 @@ h6,
   text-decoration: underline;
   margin: 0;
 }
-// End of new text styles
 
 a,
 button,
@@ -184,8 +181,8 @@ svg * {
 //   @include focus-visible;
 // }
 
-.header,
-.content > *:not(:nth-last-child(2)),
-.footer {
-  // display: none !important;
-}
+// .header,
+// .content > *:not(:nth-last-child(2)),
+// .footer {
+//   display: none !important;
+// }

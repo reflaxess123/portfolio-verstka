@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import DownloadIcon from '../../shared/assets/svg/download.svg?react';
 import Logo from '../../shared/assets/svg/logo.svg?react';
-import MenuIcon from '../../shared/assets/svg/menu.svg?react';
+import BurgerButton from '../../shared/components/BurgerButton';
 import { Button } from '../../shared/components/Button/Button';
-import styles from './Header.module.scss';
+import './Header.scss';
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,35 +12,34 @@ export function Header() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const Menu = ['About Me', 'Skills', 'Projects', 'Contacts Me'];
+
   return (
-    <div>
-      <header className={`${styles['header']} ${isMenuOpen ? styles.active : ''}`}>
-        <div className={styles['header__logo']}>
+    <div className="container">
+      <header className={`header ${isMenuOpen ? 'active' : ''}`}>
+        <div className="header__logo">
           <Logo />
-          <h5 className={styles['header__logo-title']}>Personal</h5>
+          <h5 className="header__logo-title">Personal</h5>
         </div>
-        <ul className={styles['header__menu']}>
-          <h5 className={styles['header__menu-item']}>About Me</h5>
-          <h5 className={styles['header__menu-item']}>Skills</h5>
-          <h5 className={styles['header__menu-item']}>Projects</h5>
-          <h5 className={styles['header__menu-item']}>Contacts Me</h5>
+        <ul className="header__menu">
+          <h5 className="header__menu-item">About Me</h5>
+          <h5 className="header__menu-item">Skills</h5>
+          <h5 className="header__menu-item">Projects</h5>
+          <h5 className="header__menu-item">Contacts Me</h5>
         </ul>
-        <Button
-          className={styles['header__button']}
-          icon={<DownloadIcon />}
-          size="medium"
-          text="Resume"
+        <Button className="header__button" icon={<DownloadIcon />} size="medium" text="Resume" />
+        <BurgerButton
+          className="header__menu-icon"
+          onClick={handleMenuClick}
+          isActive={isMenuOpen}
         />
-        <MenuIcon className={styles['header__menu-icon']} onClick={handleMenuClick} />
       </header>
-      <div className={`${styles['header__menu-overlay']} ${isMenuOpen ? styles.active : ''}`}>
-        <div className={styles['header__menu-overlay-items']}>
-          <h2 className={styles['header__menu-item']}>About Me</h2>
-          <h2 className={styles['header__menu-item']}>Skills</h2>
-          <h2 className={styles['header__menu-item']}>Projects</h2>
-          <h2 className={styles['header__menu-item']}>Contacts Me</h2>
-        </div>
-        <MenuIcon className={styles['header__menu-icon']} onClick={handleMenuClick} />
+      <div className={`fullscreen-menu ${isMenuOpen ? 'is-active' : ''}`}>
+        <ul className="fullscreen-menu__list">
+          {Menu.map((item) => (
+            <li className="h5 fullscreen-menu__item">{item}</li>
+          ))}
+        </ul>
       </div>
     </div>
   );
