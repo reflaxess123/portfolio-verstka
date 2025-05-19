@@ -5,7 +5,7 @@
   padding: 20px fluid(32, 0);
   background-image: url('/Banner.jpg');
   background-repeat: no-repeat;
-  background-size: auto 100%;
+  background-size: auto calc(100% - 120px);
   background-position: right 32px center;
 
   &__text {
@@ -13,8 +13,8 @@
     line-height: 24px;
     letter-spacing: 0.4px;
     margin: 0;
-    padding-top: 32px;
-    max-width: fluid-to-tablet(600, 110);
+    padding-top: fluid-to-tablet(32, 16);
+    max-width: fluid-to-tablet(600, 230);
   }
 
   &__block1 {
@@ -42,6 +42,45 @@
 
     &-title6 {
       font-weight: 800;
+    }
+  }
+
+  @include tablet {
+    background-image: url('/Banner_small.jpg');
+    background-size: auto fluid-to-mobile-s(780, 343);
+    background-position: center 40px;
+    height: auto;
+
+    &__text {
+      max-width: 100%;
+      padding-top: fluid-to-mobile-s(32, 8);
+    }
+
+    &__block1 {
+      padding-top: fluid-to-mobile-s(840, 390);
+      gap: fluid-to-mobile-s(20, 8);
+      &-title1,
+      &-title2 {
+        font-size: fluid-to-mobile-s(72, 28) !important;
+      }
+    }
+
+    &__block2 {
+      padding-top: fluid-to-mobile-s(40, 0);
+      gap: fluid-to-mobile-s(20, 8);
+      &-title3,
+      &-title4 {
+        font-size: fluid-to-mobile-s(72, 28) !important;
+      }
+    }
+
+    &__block3 {
+      padding-top: fluid-to-mobile-s(40, 0);
+      gap: fluid-to-mobile-s(20, 8);
+      &-title5,
+      &-title6 {
+        font-size: fluid-to-mobile-s(72, 28) !important;
+      }
     }
   }
 }
