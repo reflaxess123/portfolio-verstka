@@ -22,10 +22,9 @@ export function Header() {
           <h5 className="header__logo-title">Personal</h5>
         </div>
         <ul className="header__menu">
-          <h5 className="header__menu-item">About Me</h5>
-          <h5 className="header__menu-item">Skills</h5>
-          <h5 className="header__menu-item">Projects</h5>
-          <h5 className="header__menu-item">Contacts Me</h5>
+          {Menu.map((item) => (
+            <li className="h5 header__menu-item">{item}</li>
+          ))}
         </ul>
         <Button className="header__button" icon={<DownloadIcon />} size="medium" text="Resume" />
         <BurgerButton
