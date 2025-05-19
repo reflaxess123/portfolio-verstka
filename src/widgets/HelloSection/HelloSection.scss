@@ -1,7 +1,12 @@
 @use '@/app/styles/helpers' as *;
 
 .hello-section {
+  height: 596px;
   padding: 20px fluid(32, 0);
+  background-image: url('/Banner.jpg');
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: right 32px center;
 
   &__text {
     font-size: 20px;
@@ -9,7 +14,7 @@
     letter-spacing: 0.4px;
     margin: 0;
     padding-top: 32px;
-    max-width: 600px;
+    max-width: fluid-to-tablet(600, 110);
   }
 
   &__block1 {
