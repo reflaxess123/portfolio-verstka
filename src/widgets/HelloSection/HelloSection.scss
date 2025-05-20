@@ -2,7 +2,7 @@
 
 .hello-section {
   height: 596px;
-  padding: 20px fluid(32, 0);
+  padding: fluid(60, 20) fluid(32, 0);
   background-image: url('/Banner.jpg');
   background-repeat: no-repeat;
   background-size: auto calc(100% - 120px);
@@ -14,6 +14,7 @@
     letter-spacing: 0.4px;
     margin: 0;
     padding-top: fluid-to-tablet(32, 16);
+    padding-left: 3px;
     max-width: fluid-to-tablet(600, 230);
   }
 
@@ -54,6 +55,7 @@
     &__text {
       max-width: 100%;
       padding-top: fluid-to-mobile-s(32, 8);
+      padding-left: 4px;
     }
 
     &__block1 {
