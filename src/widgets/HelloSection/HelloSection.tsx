@@ -1,5 +1,8 @@
-import { IconCard } from '../../shared/components/IconCard';
+import DiscordIcon from '../../shared/assets/svg/discord.svg?react';
 import FacebookIcon from '../../shared/assets/svg/facebook.svg?react';
+import RedditIcon from '../../shared/assets/svg/reddit.svg?react';
+import TwitterIcon from '../../shared/assets/svg/twitter.svg?react';
+import { IconCard } from '../../shared/components/IconCard';
 import './HelloSection.scss';
 
 export function HelloSection() {
@@ -25,9 +28,9 @@ export function HelloSection() {
         </p>
         <div className="hello-section__icons">
           <IconCard size="small" srcIcon={<FacebookIcon />} />
-          <IconCard size="small" srcIcon={<FacebookIcon />} />
-          <IconCard size="small" srcIcon={<FacebookIcon />} />
-          <IconCard size="small" srcIcon={<FacebookIcon />} />
+          <IconCard size="small" srcIcon={<RedditIcon />} colorInverted />
+          <IconCard size="small" srcIcon={<TwitterIcon />} colorInverted />
+          <IconCard size="small" srcIcon={<DiscordIcon />} colorInverted />
         </div>
       </div>
     </div>

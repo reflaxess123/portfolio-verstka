@@ -15,7 +15,7 @@
     margin: 0;
     padding-top: fluid-to-tablet(32, 16);
     padding-left: 3px;
-    max-width: fluid-to-tablet(600, 230);
+    max-width: fluid-to-tablet(600, 260);
   }
 
   &__block1 {
@@ -87,7 +87,14 @@
   }
 
   &__icons {
+    padding-top: 114px;
     display: flex;
     gap: 32px;
+    padding-left: 3px;
+
+    @include tablet {
+      padding-top: fluid-to-mobile-s(26, 16);
+      gap: fluid-to-mobile-s(32, 16);
+    }
   }
 }

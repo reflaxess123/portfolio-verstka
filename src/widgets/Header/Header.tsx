@@ -18,7 +18,7 @@ export function Header() {
     <div className="container">
       <header className={`header ${isMenuOpen ? 'active' : ''}`}>
         <div className="header__logo">
-          <Logo />
+          <Logo className="header__logo-icon" />
           <h5 className="header__logo-title">Personal</h5>
         </div>
         <ul className="header__menu">

@@ -1,0 +1,37 @@
+@use '@/app/styles/helpers' as *;
+
+.my-skills-section {
+  padding: 20px 32px;
+  padding-top: fluid-to-tablet(114, 120);
+
+  @include tablet {
+    padding-top: 26px;
+  }
+
+  &__titles {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+
+    &-title2 {
+      font-weight: 700;
+    }
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: space-between;
+    gap: 16px;
+    padding: fluid(40, 20) fluid(32, 0) fluid(80, 45) fluid(32, 0);
+
+    & > * {
+      aspect-ratio: 1;
+    }
+
+    @include tablet {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}

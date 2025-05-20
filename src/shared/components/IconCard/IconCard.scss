@@ -1,9 +1,68 @@
-.icon-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 56px;
-  height: 56px;
+@use '@/app/styles/helpers' as *;
+
+.icon-card-small {
+  padding: fluid(17, 12);
+  width: fluid(56, 48);
+  height: fluid(56, 48);
   border-radius: 4px;
   background-color: var(--color-black);
+  cursor: pointer;
+
+  &--inverted {
+    background-color: var(--color-white);
+    border: 2px solid var(--color-black);
+  }
+
+  &__icon-svg {
+    fill: var(--color-white);
+    width: 20px;
+    height: 20px;
+
+    &-inverted {
+      fill: var(--color-black);
+    }
+  }
+}
+
+.icon-card-large {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  fill: var(--color-black);
+  border-radius: 4px;
+  border: 2px solid var(--color-black);
+  width: 100%;
+  height: 100%;
+
+  &__icon-svg,
+  &__icon-svg-inverted {
+    width: fluid-to-tablet(100, 56);
+    height: fluid-to-tablet(100, 56);
+  }
+
+  &__title {
+    font-weight: 600;
+    line-height: 1.5;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  &--inverted {
+    border: none;
+    background-color: var(--color-black);
+    fill: var(--color-white);
+    color: var(--color-white);
+  }
+
+  @include tablet {
+    width: 100%;
+    height: 100%;
+    &__icon-svg,
+    &__icon-svg-inverted {
+      width: fluid-to-mobile-s(56, 20);
+      height: fluid-to-mobile-s(56, 20);
+    }
+  }
 }

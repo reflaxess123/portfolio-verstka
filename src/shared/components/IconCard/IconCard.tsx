@@ -15,11 +15,16 @@ export const IconCard = ({
   colorInverted = false,
 }: IconCardProps) => {
   return (
-    <div className={`icon-card icon-card--${size}`}>
-      <div className="icon-card__icon">
-        {srcIcon && React.cloneElement(srcIcon, { className: 'icon-card__icon-image' })}
+    <div className={`icon-card-${size} ${colorInverted ? `icon-card-${size}--inverted` : ''}`}>
+      <div className={`icon-card-${size}__icon`}>
+        {srcIcon &&
+          React.cloneElement(srcIcon, {
+            className: colorInverted
+              ? `icon-card-${size}__icon-svg-inverted`
+              : `icon-card-${size}__icon-svg`,
+          })}
       </div>
-      <div className="icon-card__title">{title}</div>
+      <div className={`icon-card-${size}__title`}>{title}</div>
     </div>
   );
 };
