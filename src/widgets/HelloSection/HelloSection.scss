@@ -85,4 +85,9 @@
       }
     }
   }
+
+  &__icons {
+    display: flex;
+    gap: 32px;
+  }
 }

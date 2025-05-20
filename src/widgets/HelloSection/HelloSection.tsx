@@ -1,3 +1,5 @@
+import { IconCard } from '../../shared/components/IconCard';
+import FacebookIcon from '../../shared/assets/svg/facebook.svg?react';
 import './HelloSection.scss';
 
 export function HelloSection() {
@@ -21,6 +23,12 @@ export function HelloSection() {
           Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
           unknown printer took a galley of type and scrambled it to specimen book.
         </p>
+        <div className="hello-section__icons">
+          <IconCard size="small" srcIcon={<FacebookIcon />} />
+          <IconCard size="small" srcIcon={<FacebookIcon />} />
+          <IconCard size="small" srcIcon={<FacebookIcon />} />
+          <IconCard size="small" srcIcon={<FacebookIcon />} />
+        </div>
       </div>
     </div>
   );
