@@ -1,0 +1,29 @@
+@use '@/app/styles/helpers' as *;
+
+.experience-section-wrapper-bg {
+  background-color: var(--color-black);
+}
+
+.experience-section {
+  padding: 60px fluid(56, 0);
+  color: var(--color-white);
+
+  &__titles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px 0;
+
+    &-title2 {
+      font-weight: 900;
+    }
+  }
+
+  &__blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px fluid(24, 0);
+  }
+}

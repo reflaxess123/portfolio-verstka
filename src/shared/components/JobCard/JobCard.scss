@@ -1,0 +1,46 @@
+@use '@/app/styles/helpers' as *;
+
+.job-card {
+  display: flex;
+  flex-direction: column;
+  padding: 32px 24px;
+  border-radius: 10px;
+
+  &:not(&-flat) {
+    border: 1px solid #e0e0e0;
+  }
+
+  &-flat {
+    background-color: var(--color-zinc-800);
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 30px;
+    }
+
+    &-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      &-text {
+        padding-left: fluid(30, 5);
+        font-weight: 700;
+        line-height: 1.4;
+      }
+    }
+  }
+
+  &__description {
+    padding-top: 28px;
+    font-weight: 500;
+    color: var(--color-zinc-300);
+  }
+}
