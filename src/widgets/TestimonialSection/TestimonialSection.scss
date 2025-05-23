@@ -1,0 +1,29 @@
+@use '@/app/styles/helpers' as *;
+
+.testimonial-section {
+  padding: fluid(60, 40) fluid(56, 0);
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    &-title2 {
+      font-weight: 700;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
+    gap: fluid-to-tablet(29, 19);
+
+    @include tablet {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}

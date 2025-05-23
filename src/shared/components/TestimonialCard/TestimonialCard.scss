@@ -1,0 +1,75 @@
+@use '@/app/styles/helpers' as *;
+
+.testimonial-card {
+  width: 370px;
+  height: 398px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 18px;
+  padding: 40px;
+  box-shadow: 0px 10px 30px 0px rgba(13, 11, 14, 0.15);
+  text-align: center;
+
+  @include tablet {
+    width: 100%;
+  }
+
+  &-black {
+    background-color: var(--color-black);
+    color: var(--color-white);
+
+    .testimonial-card__title::after {
+      background-color: var(--color-white);
+    }
+
+    .testimonial-card__quote-icon {
+      background-color: var(--color-white);
+      color: var(--color-black);
+    }
+  }
+
+  &__avatar-container {
+    position: relative;
+    display: inline-block;
+  }
+
+  &__avatar {
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__quote-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-black);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    font-size: 24px;
+    font-weight: bold;
+
+    &-text {
+      transform: translateY(5px);
+    }
+  }
+
+  &__title {
+    position: relative;
+
+    &::after {
+      content: '';
+      display: block;
+      width: 120px;
+      height: 2px;
+      background-color: var(--color-black);
+      margin: 1em auto;
+    }
+  }
+}
