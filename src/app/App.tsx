@@ -1,5 +1,7 @@
 import { AbouMeSection } from '../widgets/AbouMeSection';
+import { ContactSection } from '../widgets/ContactSection';
 import { ExperienceSection } from '../widgets/ExperienceSection';
+import { Footer } from '../widgets/Footer';
 import { Header } from '../widgets/Header/Header';
 import { HelloSection } from '../widgets/HelloSection/HelloSection';
 import { MySkillsSection } from '../widgets/MySkillsSection';
@@ -16,6 +18,8 @@ function App() {
       <AbouMeSection />
       <ProjectsSection />
       <TestimonialSection />
+      <ContactSection />
+      <Footer />
     </>
   );
 }
