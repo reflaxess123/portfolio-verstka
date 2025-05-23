@@ -1,0 +1,27 @@
+@use '@/app/styles/helpers' as *;
+
+.projects-section-wrapper-bg {
+  background-color: var(--color-black);
+}
+
+.projects-section {
+  padding: fluid(60, 30) fluid(32, 0);
+  color: var(--color-white);
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+
+    &-title2 {
+      font-weight: 900;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}

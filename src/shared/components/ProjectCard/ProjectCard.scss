@@ -1,0 +1,45 @@
+@use '@/app/styles/helpers' as *;
+
+.project-card {
+  display: flex;
+  padding: fluid(60, 10) 0;
+  gap: fluid-to-tablet(104, 40);
+
+  &-right {
+    flex-direction: row-reverse;
+  }
+
+  @include tablet {
+    flex-direction: column;
+  }
+
+  &__image {
+    width: fluid-to-tablet(530, 320);
+    height: fluid-to-tablet(398, 240);
+    border-radius: 18px;
+
+    @include tablet {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: fluid(28, 10);
+
+    &-number {
+      font-weight: 900;
+    }
+
+    &-title {
+      font-weight: 600;
+    }
+
+    &-read-more-btn {
+      background-color: var(--color-black);
+    }
+  }
+}

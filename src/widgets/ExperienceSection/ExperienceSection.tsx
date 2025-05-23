@@ -33,14 +33,14 @@ export const ExperienceSection = () => {
   ];
 
   return (
-    <div className="experience-section-wrapper-bg">
+    <section className="experience-section-wrapper-bg">
       <div className="container">
-        <div className="experience-section">
-          <div className="experience-section__titles">
+        <article className="experience-section">
+          <header className="experience-section__titles">
             <p className="experience-section__titles-title1 display-text">My</p>
             <p className="experience-section__titles-title2 display-text">Experience</p>
-          </div>
-          <div className="experience-section__blocks">
+          </header>
+          <section className="experience-section__blocks">
             {jobs.map((job) => (
               <JobCard
                 key={job.title}
@@ -51,9 +51,9 @@ export const ExperienceSection = () => {
                 flat={job.flat}
               />
             ))}
-          </div>
-        </div>
+          </section>
+        </article>
       </div>
-    </div>
+    </section>
   );
 };
