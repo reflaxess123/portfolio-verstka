@@ -1,8 +1,8 @@
+import AppleIcon from '../../shared/assets/svg/apple.svg?react';
+import GoogleIcon from '../../shared/assets/svg/google.svg?react';
+import YoutubeIcon from '../../shared/assets/svg/youtube.svg?react';
 import { JobCard } from '../../shared/components/JobCard';
 import './ExperienceSection.scss';
-import GoogleIcon from '../../shared/assets/svg/google.svg?react';
-import AppleIcon from '../../shared/assets/svg/apple.svg?react';
-import YoutubeIcon from '../../shared/assets/svg/youtube.svg?react';
 
 export const ExperienceSection = () => {
   const jobs = [

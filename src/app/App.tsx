@@ -1,7 +1,9 @@
+import { AbouMeSection } from '../widgets/AbouMeSection';
+import { ExperienceSection } from '../widgets/ExperienceSection';
 import { Header } from '../widgets/Header/Header';
 import { HelloSection } from '../widgets/HelloSection/HelloSection';
 import { MySkillsSection } from '../widgets/MySkillsSection';
-import { ExperienceSection } from '../widgets/ExperienceSection';
+
 function App() {
   return (
     <>
@@ -9,6 +11,7 @@ function App() {
       <HelloSection />
       <MySkillsSection />
       <ExperienceSection />
+      <AbouMeSection />
     </>
   );
 }
